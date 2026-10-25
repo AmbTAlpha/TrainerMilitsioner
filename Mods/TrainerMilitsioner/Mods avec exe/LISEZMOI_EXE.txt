@@ -1,0 +1,75 @@
+MILITSIONER TRAINER v1.0 - version avec .exe
+
+Salut ! Dans cette version, le menu est un petit programme (TrainerMilitsioner.exe).
+Tu n'as rien d'autre a installer que UE4SS.
+
+
+CE QU'IL TE FAUT
+- Militsioner Demo (Steam)
+- UE4SS, version "experimental-latest" (le fichier zDEV-UE4SS...), installe dans
+  ...\Militsioner Demo\TallProject\Binaries\Win64\
+  https://github.com/UE4SS-RE/RE-UE4SS/releases/tag/experimental-latest
+
+
+INSTALLATION
+1. Ouvre le zip et copie le dossier "Mods" dans
+   ...\Militsioner Demo\TallProject\Binaries\Win64\ue4ss\
+   Windows va te proposer de fusionner avec le dossier Mods qui existe deja : accepte.
+2. Lance le jeu, charge ta partie, puis appuie sur F7.
+
+A la fin, le dossier doit ressembler a ca :
+   ue4ss\Mods\TrainerMilitsioner\enabled.txt
+   ue4ss\Mods\TrainerMilitsioner\TrainerMilitsioner.exe
+   ue4ss\Mods\TrainerMilitsioner\scripts\  (main.lua, core.lua, items_catalog.tsv, trainer_config.ini)
+
+
+UTILISATION
+F7 en jeu : le trainer s'active et le menu s'ouvre.
+F7 une deuxieme fois : tout est coupe et remis comme avant.
+Si tu fermes le menu sans faire expres, F7 le rouvre.
+Joue en fenetre ou en fenetre sans bordure, sinon le menu ne pourra pas s'afficher
+par-dessus le jeu.
+
+Raccourcis par defaut, utilisables directement dans le jeu (menu ouvert quelque part,
+meme reduit). Tu peux tous les changer dans l'onglet Personnage :
+   Maj+F1  God mode
+   Maj+F2  Protection contre le geant
+   Maj+F3  Discretion face aux PNJ
+   Maj+F4  Furtivite du joueur
+   Maj+F5  Noclip + vol   (ESPACE monte, C ou CTRL descend)
+   Maj+F8  Vitesse rapide (deplacement du joueur x2)
+   F6      Faire apparaitre l'objet selectionne dans le catalogue
+
+
+ANTIVIRUS ET WINDOWS
+Les .exe faits avec Python se font parfois signaler a tort. Le menu ne se connecte pas
+a internet : il lit et ecrit juste quelques petits fichiers dans le dossier du mod.
+- SmartScreen : clique sur "Plus d'infos", puis "Executer quand meme".
+- Avira ou un autre antivirus : ajoute le dossier ue4ss\Mods\TrainerMilitsioner aux
+  exceptions. Si tu n'es pas a l'aise avec ca, la version sans .exe fait exactement
+  la meme chose.
+
+
+CACHER LES FENETRES D'UE4SS
+Au lancement du jeu, UE4SS ouvre une console noire et une fenetre "UE4SS Debugging Tools".
+Ca vient d'UE4SS, pas du trainer, et tu peux les desactiver :
+1. Ouvre ...\Win64\ue4ss\UE4SS-settings.ini avec le Bloc-notes.
+2. Dans la partie [Debug], mets :
+      ConsoleEnabled = 0
+      GuiConsoleEnabled = 0
+      GuiConsoleVisible = 0
+   (si tu veux garder uniquement la console noire : ConsoleEnabled = 1 et GuiConsoleEnabled = 0)
+3. Enregistre et relance le jeu.
+Le fichier UE4SS.log continue d'etre ecrit, il te servira si tu as un probleme.
+
+
+SI LE MENU NE S'OUVRE PAS
+- Regarde si ton antivirus n'a pas mis TrainerMilitsioner.exe en quarantaine.
+- Verifie que enabled.txt est bien dans le dossier TrainerMilitsioner.
+- Regarde ue4ss\UE4SS.log et cherche les lignes qui commencent par [TRAINER].
+
+
+DESINSTALLER
+Supprime le dossier ue4ss\Mods\TrainerMilitsioner. C'est tout.
+
+Jeu solo uniquement. Fais une sauvegarde de ta partie avant d'utiliser le trainer.
